@@ -1,0 +1,178 @@
+:root{
+  --bg-page:#07081a;
+  --phone-frame:#14152a;
+  --phone-bg:#0c0e24;
+  --brand-a:#5b6bff;
+  --brand-b:#37c6ff;
+  --accent-purple:#8b5cf6;
+  --accent-cyan:#4fc6ff;
+  --red-amount:#ff5470;
+  --nav-active:#ff7a45;
+  --text-main:#f3f4fb;
+  --text-muted:#9aa1c4;
+  --text-faint:#6d7396;
+  --glow-purple: 0 0 24px rgba(139,92,246,0.55);
+  --glow-cyan: 0 0 18px rgba(79,198,255,0.45);
+}
+*{box-sizing:border-box;}
+body{
+  margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+  background: var(--bg-page);
+  background-image: radial-gradient(circle at 20% 20%, rgba(91,107,255,0.10), transparent 40%);
+  font-family:'Manrope', sans-serif; color: var(--text-main); padding: 40px 20px;
+}
+
+.phone{
+  width: 320px; height: 680px; border-radius: 42px;
+  background: var(--phone-frame); border: 7px solid #1b1d38; position:relative;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.04), 0 30px 60px rgba(0,0,0,0.55), var(--glow-purple);
+  overflow:hidden;
+}
+.notch{ position:absolute; top:0; left:50%; transform:translateX(-50%); width:130px; height:22px; background:#1b1d38; border-radius:0 0 16px 16px; z-index:6; }
+.screen{ position:absolute; inset:0; background: var(--phone-bg); }
+
+/* =========================================================
+   ⬇️ IMAGEN DE FONDO COMPLETA DE LA PANTALLA
+   Reemplaza el div .bg-slot en el HTML por:
+   <img src="TU-FONDO-INICIO.png" class="bg-img">
+   ========================================================= */
+.bg-img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; }
+.bg-slot{
+  position:absolute; inset:0; z-index:0;
+  border:2px dashed rgba(255,255,255,0.25);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--text-faint); font-size:12px; text-align:center; padding:0 30px;
+  background: rgba(255,255,255,0.02);
+}
+.bg-overlay{
+  position:absolute; inset:0; z-index:1;
+  background: linear-gradient(180deg, rgba(7,8,26,0.5) 0%, rgba(7,8,26,0.6) 45%, rgba(7,8,26,0.92) 100%);
+}
+
+.content{ position:relative; z-index:2; padding: 26px 18px 90px; height:100%; display:flex; flex-direction:column; overflow-y:auto; }
+.content::-webkit-scrollbar{ display:none; }
+
+/* ---------- brand ---------- */
+.brand{ display:flex; align-items:center; justify-content:center; gap:8px; margin-bottom:16px; }
+/* ⬇️ AQUÍ VA EL LOGO: reemplaza .brand-mark por <img src="TU-LOGO.png" style="width:26px;height:26px;object-fit:contain;"> */
+.brand-mark{
+  width:26px; height:26px; border-radius:8px;
+  border:1.5px dashed rgba(255,255,255,0.4);
+  display:flex; align-items:center; justify-content:center;
+  font-size:8px; color:var(--text-faint); background: rgba(0,0,0,0.2);
+}
+.brand-name{
+  font-family:'Poppins', sans-serif; font-weight:700; font-size:17px;
+  background: linear-gradient(90deg, var(--brand-a), var(--brand-b));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+
+/* ---------- greeting ---------- */
+.greeting{ display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+/* ⬇️ AQUÍ VA LA FOTO DE PERFIL: reemplaza .avatar-slot por <img src="TU-FOTO-PERFIL.png" style="width:38px;height:38px;border-radius:50%;object-fit:cover;"> */
+.avatar-slot{
+  width:38px; height:38px; border-radius:50%; flex:0 0 auto;
+  border:1.5px dashed rgba(255,255,255,0.4);
+  display:flex; align-items:center; justify-content:center;
+  font-size:7px; color:var(--text-faint); background: rgba(0,0,0,0.2);
+  box-shadow: var(--glow-cyan);
+}
+.greeting-text{ font-size:14px; font-weight:700; color: var(--text-main); }
+
+/* ---------- balance card ---------- */
+.balance-card{
+  position:relative;
+  border-radius: 18px;
+  padding: 18px 20px;
+  text-align:center;
+  background: linear-gradient(135deg, rgba(91,107,255,0.35), rgba(139,92,246,0.35));
+  border: 1.5px solid rgba(139,92,246,0.6);
+  box-shadow: 0 0 26px rgba(91,107,255,0.4), inset 0 0 20px rgba(139,92,246,0.15);
+  margin-bottom: 20px;
+}
+.balance-card::after{
+  content:""; position:absolute; left:12%; right:12%; bottom:-12px; height:16px;
+  background: linear-gradient(90deg, var(--brand-a), var(--accent-purple));
+  filter: blur(16px); opacity:0.5; z-index:-1; border-radius:50%;
+}
+.balance-label{ font-size:11px; color: var(--text-muted); font-weight:600; margin-bottom:6px; }
+.balance-amount{
+  font-family:'Poppins', sans-serif; font-weight:800; font-size:30px;
+  background: linear-gradient(90deg, #ffffff, #cfe0ff);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+
+/* ---------- two-column section ---------- */
+.section-row{ display:flex; gap:12px; margin-bottom:18px; }
+.section-title{ font-size:12px; font-weight:700; color: var(--text-main); margin-bottom:10px; }
+
+.gastos-col{ flex:1.15; }
+.gasto-item{
+  display:flex; align-items:center; gap:8px;
+  background: rgba(15,16,40,0.55);
+  border: 1.5px solid rgba(139,92,246,0.4);
+  border-radius: 10px; padding: 8px 10px; margin-bottom:8px;
+  box-shadow: 0 0 8px rgba(139,92,246,0.22);
+}
+/* ⬇️ ICONOS DE GASTOS: reemplaza cada .gasto-icon por <img src="TU-ICONO.png" style="width:22px;height:22px;object-fit:contain;"> */
+.gasto-icon{
+  width:22px; height:22px; border-radius:6px; flex:0 0 auto;
+  border:1px dashed rgba(255,255,255,0.4);
+  display:flex; align-items:center; justify-content:center;
+  font-size:6px; color: var(--text-faint);
+}
+.gasto-text{ flex:1; line-height:1.2; }
+.gasto-title{ font-size:11px; font-weight:700; color: var(--text-main); }
+.gasto-sub{ font-size:9px; color: var(--text-faint); }
+.gasto-amount{ font-size:11px; font-weight:700; color: var(--red-amount); text-shadow: 0 0 8px rgba(255,84,112,0.5); }
+
+.chart-col{ flex:1; }
+.chart-card{
+  background: rgba(15,16,40,0.55);
+  border: 1.5px solid rgba(79,198,255,0.4);
+  border-radius: 10px; padding: 10px;
+  box-shadow: 0 0 10px rgba(79,198,255,0.22);
+  height: 100%;
+}
+.chart-bars{ display:flex; align-items:flex-end; gap:4px; height:64px; margin-top:6px; }
+.bar{ flex:1; border-radius:3px 3px 0 0; background: linear-gradient(180deg, var(--accent-cyan), var(--brand-a)); box-shadow: 0 0 6px rgba(79,198,255,0.5); }
+.chart-labels{ display:flex; justify-content:space-between; margin-top:4px; }
+.chart-labels span{ font-size:7px; color: var(--text-faint); }
+
+/* ---------- button ---------- */
+.btn-primary{
+  width:100%; padding:13px; border-radius:12px; border:none;
+  background: linear-gradient(90deg, var(--brand-a), var(--accent-purple));
+  color:#fff; font-weight:700; font-size:13px; font-family:'Manrope', sans-serif;
+  display:flex; align-items:center; justify-content:center; gap:8px; cursor:pointer;
+  box-shadow: 0 6px 20px rgba(91,107,255,0.35);
+  transition: box-shadow .15s ease, transform .1s ease;
+}
+.btn-primary:hover{ box-shadow: var(--glow-purple), 0 6px 20px rgba(91,107,255,0.35); }
+.btn-primary:active{ transform: scale(0.97); box-shadow: 0 0 30px rgba(139,92,246,0.8); }
+
+/* ---------- bottom nav ---------- */
+.bottom-nav{
+  position:absolute; left:0; right:0; bottom:0; z-index:6;
+  display:flex; justify-content:space-around; align-items:center;
+  padding: 14px 10px 18px;
+  background: rgba(7,8,26,0.7);
+  backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+/* ⬇️ ICONOS DE NAVEGACIÓN: reemplaza cada .nav-icon por <img src="TU-ICONO.png" style="width:18px;height:18px;object-fit:contain;"> */
+.nav-icon{
+  width:18px; height:18px;
+  border:1px dashed rgba(255,255,255,0.4); border-radius:4px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:6px; color: var(--text-faint);
+}
+.nav-item{ display:flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:50%; }
+.nav-item.active{
+  background: linear-gradient(135deg, var(--nav-active), #ff4d6d);
+  box-shadow: 0 0 16px rgba(255,122,69,0.7);
+}
+.nav-item.active .nav-icon{ border-color: rgba(255,255,255,0.8); }
+
+.center-link{ text-align:center; font-size:11px; color: var(--text-muted); }
+.link{ color: var(--accent-cyan); text-decoration:none; font-weight:700; }

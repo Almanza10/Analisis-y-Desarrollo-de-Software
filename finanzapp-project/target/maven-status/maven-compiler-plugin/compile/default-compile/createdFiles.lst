@@ -1,0 +1,10 @@
+com\finanzapp\config\DataSeeder.class
+com\finanzapp\controller\HomeController.class
+com\finanzapp\repository\UsuarioRepository.class
+com\finanzapp\controller\InicioController.class
+com\finanzapp\ServletInitializer.class
+com\finanzapp\service\UsuarioService.class
+com\finanzapp\model\Usuario.class
+com\finanzapp\controller\AdminController.class
+com\finanzapp\FinanzappApplication.class
+com\finanzapp\controller\AuthController.class
