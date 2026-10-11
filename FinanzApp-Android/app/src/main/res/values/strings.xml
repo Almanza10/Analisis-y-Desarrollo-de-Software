@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FinanzApp</string>
+
+    <!-- Comunes -->
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="label_nombres">Nombres</string>
+    <string name="label_apellidos">Apellidos</string>
+    <string name="label_cedula">Cédula</string>
+    <string name="label_fecha_nacimiento">Fecha de nacimiento</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Contraseña</string>
+    <string name="fecha_placeholder">dd/mm/aaaa</string>
+    <string name="cd_seleccionar_fecha">Seleccionar fecha</string>
+
+    <!-- Login -->
+    <string name="login_titulo">Inicia sesión</string>
+    <string name="login_subtitulo">Bienvenido de nuevo, gestiona tus finanzas fácilmente.</string>
+    <string name="login_registro_exitoso">✔ Cuenta creada con éxito. Ya puedes iniciar sesión.</string>
+    <string name="login_label_usuario">Usuario (email):</string>
+    <string name="login_label_password">Contraseña:</string>
+    <string name="login_boton">Iniciar Sesión</string>
+    <string name="login_sin_cuenta">¿No tiene una cuenta?</string>
+    <string name="login_registrese">Regístrese</string>
+    <string name="login_olvido_password">Olvidó la contraseña</string>
+    <string name="login_error_credenciales">⚠ Usuario o contraseña incorrectos.</string>
+    <string name="login_error_campos_vacios">⚠ Ingresa tu email y tu contraseña.</string>
+
+    <!-- Registro -->
+    <string name="registro_titulo">Registro</string>
+    <string name="registro_banner_titulo">⚠ ERROR: Revisa los datos marcados</string>
+    <string name="registro_banner_detalle">Corrige los campos en rojo e inténtalo de nuevo.</string>
+    <string name="registro_boton">Crear cuenta</string>
+    <string name="registro_ya_tiene_cuenta">¿Ya tienes cuenta?</string>
+    <string name="registro_inicia_sesion">Inicia sesión aquí</string>
+    <string name="tab_registro">Registro</string>
+    <string name="tab_login">Login</string>
+    <string name="error_fecha_invalida">*FECHA ERRÓNEA</string>
+    <string name="error_menor_de_edad">*DEBE SER MAYOR DE EDAD</string>
+    <string name="error_email_invalido">*CORREO INVALIDO</string>
+    <string name="error_email_registrado">*CORREO YA REGISTRADO</string>
+    <string name="error_cedula_registrada">*CÉDULA YA REGISTRADA</string>
+
+    <!-- Inicio -->
+    <string name="inicio_saludo">¡Hola %1$s, bienvenido!</string>
+    <string name="inicio_saldo_disponible">Saldo Disponible</string>
+    <string name="inicio_gastos_recientes">Gastos Recientes</string>
+    <string name="inicio_mensualmente">Mensualmente</string>
+    <string name="inicio_gasto_titulo">Gastos</string>
+    <string name="inicio_gasto_subtitulo">Suplto</string>
+    <string name="inicio_anadir_transaccion">Añadir Transacción</string>
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_graficos">Gráficos</string>
+    <string name="nav_documentos">Documentos</string>
+    <string name="nav_configuracion">Configuración</string>
+
+    <!-- Admin -->
+    <string name="admin_etiqueta">/ ADMIN</string>
+    <string name="admin_sesion">Sesión: %1$s</string>
+    <string name="admin_titulo">Gestión de usuarios</string>
+    <string name="admin_subtitulo">Consulta, edita o elimina las cuentas registradas en FinanzApp.</string>
+    <string name="admin_vacio">No hay usuarios registrados todavía.</string>
+    <string name="admin_editar">Editar</string>
+    <string name="admin_eliminar">Eliminar</string>
+    <string name="admin_guardar">Guardar cambios</string>
+    <string name="admin_editando">Editando: %1$s</string>
+    <string name="admin_label_rol">Rol</string>
+    <string name="admin_eliminar_titulo">Eliminar usuario</string>
+    <string name="admin_eliminar_mensaje">¿Eliminar al usuario %1$s? Esta acción no se puede deshacer.</string>
+    <string name="admin_error_campos_vacios">Completa todos los campos.</string>
+    <string name="admin_error_email_invalido">El correo no es válido.</string>
+    <string name="admin_error_email_duplicado">Ese correo ya pertenece a otro usuario.</string>
+    <string name="admin_error_cedula_duplicada">Esa cédula ya pertenece a otro usuario.</string>
+    <string name="admin_error_no_encontrado">El usuario ya no existe.</string>
+</resources>
