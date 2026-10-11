@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Hola Mundo Grupo 5</string>
+    <string name="titulo">¡Hola mundo!</string>
+    <string name="subtitulo">Somos el grupo 5</string>
+    <string name="integrantes">Integrantes:\nJuan David Salamanca Cristancho\nJohan Camilo Rodríguez Bautista\nSantiago Cepeda Fonseca</string>
+    <string name="desc_imagen">Globo terráqueo</string>
+</resources>
